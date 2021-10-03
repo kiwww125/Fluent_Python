@@ -19,10 +19,8 @@ class FrenchDeck:
         return self._cards[position]
 
 
-suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
-
-
 def spades_high(card):
+    suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
     rank_value = FrenchDeck.ranks.index(card.rank)
     return rank_value * len(suit_values) + suit_values[card.suit]
 
